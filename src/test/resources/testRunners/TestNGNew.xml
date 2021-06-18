@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Test Suite new" thread-count="2" parallel="tests">
+	<test name="My Testing Practice Test 1" verbose="2" thread-count="3"
+		parallel="methods">
+		<parameter name="browser" value="chrome" />
+		<parameter name="url"
+			value="http://tutorialsninja.com/demo/index.php?route=account/login" />
+		<parameter name="username" value="veenasmohan04@gmail.com" />
+		<parameter name="password" value="MadhavNeerav@6855" />
+		<classes>
+			<class name="com.tests.LoginTestNew">
+			<methods>
+				<exclude name="myAccount" />
+				<exclude name="pageTitleTest" />
+			</methods>
+		</class>
+		</classes>
+	</test>
+
+	<test name="My Testing Practice Test 2" verbose="2" thread-count="2"
+		parallel="methods">
+		<parameter name="browser" value="firefox" />
+		<parameter name="url"
+			value="http://tutorialsninja.com/demo/index.php?route=account/register" />
+		<classes>
+			<class name="com.tests.RegisterTest" />
+		</classes>
+	</test>
+
+</suite> 
